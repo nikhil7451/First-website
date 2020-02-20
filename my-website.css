@@ -1,0 +1,218 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --fonttwo: "Grand Hotel", cursive;
+    --primarycolor: #698f3f;
+    --secondarycolor: #fca311;
+    --maindark: #3a3e3b;
+    --mainwhite: #fff;
+    --maingrey: #e5e5e5;
+    --maintransition: all 0.3s ease-in-out;
+    --letterspacing: 0.5rem;
+    --margin: 2rem;
+}
+
+body {
+    background-color: #ececec;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    padding: 25px;
+    display: block;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+#main-links ul {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#main-links a:hover {
+    color: rgb(172, 81, 81);
+}
+
+#main-links a:active {
+    color: skyblue;
+}
+
+#logo {
+    font-size: 2em;
+    margin: 0 auto;
+    font-family: 'Poiret One', cursive;
+}
+
+#social-links ul {
+    display: flex;
+}
+
+#social-links a:hover {
+    color: purple;
+}
+
+#intro {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #005AA7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFFDE4, #005AA7), url('top.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./my-website-img/allcw.jpg") center/cover no-repeat fixed;
+    background-size: cover;
+    color: #C59237;
+}
+
+#intro p {
+    width: 30%;
+    margin: 0 auto;
+}
+
+#intro h1 {
+    font-size: 2.8em;
+    padding: 22px;
+    font-family: 'Poiret One', cursive;
+}
+
+.card-containers {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards {
+    flex-basis: 250px;
+    max-width: 400px;
+    flex-grow: 1;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.cards:hover {
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, .2);
+}
+
+.cards .card-img {
+    height: 200px;
+    overflow: hidden;
+    transform: scale(0.95);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .2);
+    transition: transform 0.3s;
+}
+
+.cards:hover .card-img {
+    transform: scale(1);
+}
+
+.cards .card-img img {
+    height: 100%;
+    min-width: 100%;
+}
+
+.cards .card-title {
+    padding: 12px;
+}
+
+.cards .card-des {
+    padding: 12px;
+    padding-top: 0px;
+    margin-bottom: 20px;
+}
+
+.cards .call-to-action {
+    margin: 10px;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.cards .call-to-action a {
+    display: block;
+    padding: 10px 15px;
+    color: rgb(238, 226, 226);
+    border: 2px solid transparent;
+    background-color: #8e9ea1;
+    text-decoration: none;
+    transition-property: border, background-color, color;
+    transition-duration: 0.3s;
+}
+
+.cards .call-to-action a:hover {
+    border: 2px solid #8e9ea1;
+    color: #8e9ea1;
+    background-color: transparent;
+}
+
+#showcase {
+    display: flex;
+}
+
+#showcase aside {
+    flex-basis: 500px;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+#showcase aside h3 {
+    padding: 20px;
+}
+
+#showcase aside a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+#showcase aside a:hover {
+    background-color: rgba(0, 0, 0, .1);
+    transition: 0.3s;
+}
+
+#showcase aside nav ul {
+    list-style-type: none;
+}
+
+#footer {
+    background-color: teal;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width:720px) {
+    header {
+        flex-direction: column;
+    }
+    #logo {
+        order: -1;
+    }
+    #showcase aside {
+        display: none;
+    }
+    #intro h1 {
+        font-size: 1.5em;
+    }
+    #intro p {
+        width: 80%;
+    }
